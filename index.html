@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="port.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
@@ -68,30 +68,88 @@
 
 
 <section id="projects" class="projects">
-    <h2>Projects</h2>
+  <h2>Projects</h2>
 
-    <div class="project-card">
-        <h3>Student Complaint Portal</h3>
+  <!-- Doctor Appointment System -->
+  <div class="project-card">
+    <h3>Doctor Appointment Booking System</h3>
+    <p>
+      A full-stack web application that allows patients to book appointments
+      with doctors online.
+    </p>
+
+    <button class="view-btn" onclick="toggleDetails('doctor')">
+      View More
+    </button>
+
+    <div id="doctor" class="project-details">
       <p>
-    A web application where students can submit their complaints or problems
-    online, and administrators can view and manage the issues efficiently.
-     </p>
+        Doctors and administrators can manage schedules, appointments,
+        and patient details efficiently.
+      </p>
 
-    </div>
+      <h4>Key Features:</h4>
+      <ul>
+        <li>Patient registration and login</li>
+        <li>Doctor listing and appointment booking</li>
+        <li>Appointment management dashboard</li>
+        <li>Authentication and access control</li>
+      </ul>
 
-    <div class="project-card">
-        <h3>Blog Application</h3>
-        <p>
-            A MERN stack blog application with create, update, and delete features.
-        </p>
+      <p><strong>Technologies Used:</strong></p>
+      <p>MongoDB, Express.js, React.js, Node.js (MERN Stack)</p>
     </div>
+  </div>
+
+  <!-- Student Complaint Portal -->
+  <div class="project-card">
+    <h3>Student Complaint Portal</h3>
+    <p>
+      A web application that enables students to submit complaints online
+      and track their status.
+    </p>
+
+    <button class="view-btn" onclick="toggleDetails('complaint')">
+      View More
+    </button>
+
+    <div id="complaint" class="project-details">
+      <p>
+        Administrators can review complaints, update statuses,
+        and manage issues efficiently.
+      </p>
+
+      <h4>Key Features:</h4>
+      <ul>
+        <li>Online complaint submission</li>
+        <li>Unique complaint ID for tracking</li>
+        <li>Admin-side complaint management</li>
+      </ul>
+
+      <p><strong>Technologies Used:</strong></p>
+      <p>HTML, CSS, JavaScript, Flask, SQLite</p>
+    </div>
+  </div>
 </section>
+
+<script>
+  function toggleDetails(id) {
+    const details = document.getElementById(id);
+    details.classList.toggle("show");
+  }
+</script>
+
 
 <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <p>Email: febinaazeez0539@example.com</p>
-    <p>GitHub: github.com/febinaah</p>
+  <h2>Contact</h2>
+
+  <p> Email: <a href="mailto:febinaazeez0539@example.com" class="contact-link">
+      febinaazeez0539@example.com  </a></p>
+
+  <p> GitHub:<a href="https://github.com/febieeh" target="_blank" class="contact-link">
+      github/febinaah </a> </p>
 </section>
+
 
 <footer>
     <p>© 2025 Febina Ka</p>
